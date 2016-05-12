@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gc-console:war">
+    <output-path>$PROJECT_DIR$/gc-console/target</output-path>
+    <root id="archive" name="gc-console.war">
+      <element id="artifact" artifact-name="gc-console:war exploded" />
+    </root>
+  </artifact>
+</component>

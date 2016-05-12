@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GlacierCrawler.iml" filepath="$PROJECT_DIR$/GlacierCrawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gc-console/gc-console.iml" filepath="$PROJECT_DIR$/gc-console/gc-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gc-core/gc-core.iml" filepath="$PROJECT_DIR$/gc-core/gc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gc-genera/gc-genera.iml" filepath="$PROJECT_DIR$/gc-genera/gc-genera.iml" />
+    </modules>
+  </component>
+</project>
