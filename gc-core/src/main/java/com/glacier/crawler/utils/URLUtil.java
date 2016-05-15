@@ -1,6 +1,13 @@
 package com.glacier.crawler.utils;
 
+import com.glacier.crawler.downloader.HttpClientDownloader;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 import java.net.URL;
 import java.util.regex.Pattern;
@@ -11,6 +18,8 @@ import java.util.regex.Pattern;
 public class URLUtil {
 
     private static Pattern patternForProtocal = Pattern.compile("[\\w]+://");
+    private static CloseableHttpClient httpClient = HttpClients.createDefault();
+    private static RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(2000).setConnectTimeout(2000).build();
 
     public static String removeProtocol(String url) {
         return patternForProtocal.matcher(url).replaceAll("");
@@ -27,7 +36,7 @@ public class URLUtil {
 
     public static String getURL(String str) {
         try {
-            if (str.indexOf("http://") < 0) {
+            if (str.indexOf("http://") < 0 && str.indexOf("https://") < 0) {
                 str = "http://" + str;
             }
             URL url = new URL(str);
@@ -40,6 +49,16 @@ public class URLUtil {
 
     public static void main(String[] args) {
         URLUtil.getURL("www.baidu.com");
+    }
+
+    public static String getRealURL(String url) {
+        HttpClientDownloader downloader = new HttpClientDownloader();
+        try {
+            return downloader.connect(url).getRealURL();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return url;
     }
 
 }

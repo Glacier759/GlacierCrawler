@@ -3,9 +3,18 @@ package com.glacier.crawler.utils;
 import com.glacier.crawler.crawler.Crawler;
 import com.glacier.crawler.entity.CrawlerEntity;
 import com.glacier.crawler.model.CrawlerConfigWithBLOBs;
+import com.glacier.crawler.model.CrawlerTemplate;
+import com.glacier.crawler.template.Attr;
+import com.glacier.crawler.template.Tag;
+import com.glacier.crawler.template.Template;
 import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -52,7 +61,12 @@ public class CrawlerUtil {
         if (!StringUtils.isEmpty(crawlerBean.getTaskPatterns())) {
             for (String pattern : crawlerBean.getTaskPatterns().split(";")) {
                 String[] pattern_array = pattern.split(":.:");
-                crawlerEntity.addTaskPattern(pattern_array[0], pattern_array[1]);
+                if (StringUtils.equalsIgnoreCase("this", pattern_array[0])) {
+                    crawlerEntity.setTemplateID(pattern_array[1]);
+                }
+                else {
+                    crawlerEntity.addTaskPattern(pattern_array[0], pattern_array[1]);
+                }
             }
         }
         if (!StringUtils.isEmpty(crawlerBean.getTaskStartUrl())) {
@@ -110,6 +124,79 @@ public class CrawlerUtil {
         crawlerBean.setTaskStartUrl(buffer.toString());
         buffer.setLength(0);
         return crawlerBean;
+    }
+
+    public static Template transferCrawlerTemplate(CrawlerTemplate crawlerTemplate) {
+        Template template = new Template();
+
+        try {
+            Document doc = DocumentHelper.parseText(crawlerTemplate.getTemplate());
+            Element root = doc.getRootElement();
+            List<?> tags = root.elements("tag");
+            for (Iterator<?> iterator = tags.iterator(); iterator.hasNext(); ) {
+                Element tagEle = (Element) iterator.next();
+                Tag tag = new Tag();
+                tag.setName(tagEle.attributeValue("name"));
+                tag.setPattern(tagEle.element("pattern").getText());
+                tag.setOnlyPattern(Boolean.parseBoolean(tagEle.element("pattern").attributeValue("onlyPattern")));
+                Element operator = tagEle.element("operator");
+                Attr oper = new Attr();
+                oper.setOperator(operator.attributeValue("op"));
+                Element idEle = operator.element("id");
+                if (idEle != null) {
+                    oper.setId(idEle.getText());
+                }
+                Element templateEle = operator.element("templateID");
+                if (templateEle != null) {
+                    oper.setTemplateID(templateEle.getText());
+                }
+                List<?> attrEles = operator.elements("attr");
+                if (attrEles != null) {
+                    for (Iterator<?> iter = attrEles.iterator(); iter.hasNext(); ) {
+                        Element attrEle = (Element) iter.next();
+                        oper.addAttr(attrEle.getText());
+                    }
+                }
+                tag.setOperators(oper);
+                template.addTag(tag);
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return template;
+    }
+
+    public static CrawlerTemplate transferTemplate(Template template) {
+        CrawlerTemplate crawlerTemplate = new CrawlerTemplate();
+
+        try {
+            Document doc = DocumentHelper.createDocument();
+            Element root = doc.addElement("template");
+            for ( Tag tag : template.getTags() ) {
+                Element tagEle = root.addElement("tag");
+                tagEle.addAttribute("name", tag.getName());
+                tagEle.addElement("pattern").addAttribute("onlyPattern", tag.getOnlyPattern().toString()).addText(tag.getPattern());
+                Element operEle = tagEle.addElement("operator");
+                operEle.addAttribute("op", tag.getOperators().getOperator());
+                if (tag.getOperators().getId() != null) {
+                    operEle.addElement("id").addText(tag.getOperators().getId());
+                }
+                if (tag.getOperators().getAttrs() != null) {
+                    for (String attr : tag.getOperators().getAttrs()) {
+                        operEle.addElement("attr").addText(attr);
+                    }
+                }
+                if (tag.getOperators().getTemplateID() != null) {
+                    operEle.addElement("templateID").addText(tag.getOperators().getTemplateID());
+                }
+            }
+            crawlerTemplate.setTemplate(doc.asXML());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return crawlerTemplate;
     }
 
 }

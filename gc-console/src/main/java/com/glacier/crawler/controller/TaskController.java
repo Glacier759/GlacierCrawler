@@ -35,7 +35,7 @@ public class TaskController {
     private CrawlerService crawlerService;
 
     @ResponseBody
-    @RequestMapping(value = "/{task}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{task}", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String status(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
         if ( systemService.selectCrawlerTask(task) == null ) {
@@ -52,7 +52,7 @@ public class TaskController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public String create(HttpServletRequest request) {
         JSONObject result = new JSONObject();
 
@@ -88,7 +88,7 @@ public class TaskController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}", method = RequestMethod.POST)
+    @RequestMapping(value = "/{task}", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public String createT(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
 
@@ -124,10 +124,9 @@ public class TaskController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/{task}", method = RequestMethod.PUT, produces = "application/json;charset=UTF-8")
     public String modify(HttpServletRequest request, @PathVariable("task") String task, @RequestBody String json) {
         JSONObject result = new JSONObject();
-        Map<String, String[]> paramsss = request.getParameterMap();
 
         if (systemService.selectCrawlerTask(task) == null) {
             result.put("status", "failed");
@@ -164,17 +163,25 @@ public class TaskController {
             else {
                 crawlerBean.setTaskType("TYPE_TASK_QUEUE");
             }
+            String templateID = taskObj.getString("templateID");
             JSONObject patternObj = taskObj.getJSONObject("task_pattern");
+            StringBuilder patternBuff = new StringBuilder();
+            if (templateID != null) {
+                patternBuff.append("this");
+                patternBuff.append(":.:");
+                patternBuff.append(templateID);
+                patternBuff.append(";");
+            }
             if (patternObj != null) {
-                StringBuilder patternBuff = new StringBuilder();
                 for (String key : patternObj.keySet()) {
                     patternBuff.append(key);
                     patternBuff.append(":.:");
                     patternBuff.append(patternObj.get(key));
                     patternBuff.append(";");
                 }
-                crawlerBean.setTaskPatterns(patternBuff.toString());
             }
+            crawlerBean.setTaskPatterns(patternBuff.toString());
+
             JSONObject paramObj = taskObj.getJSONObject("login_params");
             if (paramObj != null) {
                 StringBuilder paramBuff = new StringBuilder();
@@ -232,7 +239,7 @@ public class TaskController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{task}", method = RequestMethod.DELETE, produces = "application/json;charset=UTF-8")
     public String delete(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
         if ( systemService.selectCrawlerTask(task) == null ) {

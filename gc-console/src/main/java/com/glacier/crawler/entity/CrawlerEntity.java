@@ -21,6 +21,7 @@ public class CrawlerEntity {
     private String task_type;
     private Integer task_thread_num;
     private List<String> task_start_url = new ArrayList<>();
+    private String templateID;
 
     private boolean canLogin = false;
 
@@ -131,5 +132,13 @@ public class CrawlerEntity {
 
     public void addTaskStartUrl(String startUrl) {
         this.task_start_url.add(startUrl);
+    }
+
+    public String getTemplateID() {
+        return templateID;
+    }
+
+    public void setTemplateID(String templateID) {
+        this.templateID = templateID;
     }
 }

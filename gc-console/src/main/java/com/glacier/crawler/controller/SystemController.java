@@ -8,8 +8,10 @@ import com.glacier.crawler.entity.CrawlerEntity;
 import com.glacier.crawler.entity.Task;
 import com.glacier.crawler.login.Login;
 import com.glacier.crawler.model.CrawlerTask;
+import com.glacier.crawler.model.CrawlerTemplate;
 import com.glacier.crawler.service.CrawlerService;
 import com.glacier.crawler.service.SystemService;
+import com.glacier.crawler.template.Template;
 import com.glacier.crawler.utils.CrawlerUtil;
 import com.glacier.crawler.utils.ReturnResult;
 import org.apache.commons.lang3.StringUtils;
@@ -37,14 +39,13 @@ public class SystemController {
     private CrawlerService crawlerService;
 
     @ResponseBody
-    @RequestMapping(value = "/status", method = RequestMethod.GET)
+    @RequestMapping(value = "/status", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String status(HttpServletRequest request) {
         JSONObject result = new JSONObject();
         File file = new File("baidu");
         if (!file.exists()) {
             file.mkdirs();
         }
-        System.out.println(file.getAbsolutePath());
         List<CrawlerTask> crawlerTaskList = systemService.selectAllCrawlerTask();
         if ( crawlerTaskList.size() > 0 ) {
             result.put("status", "success");
@@ -66,7 +67,7 @@ public class SystemController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/status/{task}", method = RequestMethod.GET)
+    @RequestMapping(value = "/status/{task}", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String taskStatus(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
 
@@ -87,19 +88,19 @@ public class SystemController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{task}", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String taskStatusT(HttpServletRequest request, @PathVariable("task") String task) {
         return taskStatus(request, task);
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}/status", method = RequestMethod.GET)
+    @RequestMapping(value = "/{task}/status", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String taskStatusP(HttpServletRequest request, @PathVariable("task") String task) {
         return taskStatus(request, task);
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}/start", method = RequestMethod.GET)
+    @RequestMapping(value = "/{task}/start", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String taskStart(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
         CrawlerTask crawlerTask = systemService.selectCrawlerTask(task);
@@ -117,6 +118,8 @@ public class SystemController {
         CrawlerEntity crawlerEntity = CrawlerUtil.transferConfig(crawlerService.selectByCrawlerName(task));
 
         Crawler crawler = CrawlerUtil.getCrawler(crawlerEntity.getCrawler_name());
+        crawler.scheduler().setKey(crawlerEntity.getCrawler_name());
+
         if ( crawlerEntity.canLogin() ) {
             Login login = new Login();
             login.setLoginURL(crawlerEntity.getLogin_url());
@@ -160,17 +163,37 @@ public class SystemController {
             else {
                 t.setCrawlerType(Task.TYPE_TASK_QUEUE);
             }
+            if (crawlerEntity.getTemplateID() != null) {
+                CrawlerTemplate crawlerTemplate = crawlerService.selectTemplate(Long.parseLong(crawlerEntity.getTemplateID()));
+                if (crawlerTemplate == null) {
+                    result.put("status", "failed");
+                    result.put("message", "Unrecognized Profile.");
+                    return ReturnResult.processOutputJSON(request, result);
+                }
+                Template template = CrawlerUtil.transferCrawlerTemplate(crawlerTemplate);
+                t.setTemplate(template);
+            }
             if (crawlerEntity.getTask_pattern() != null) {
                 for ( String pattern : crawlerEntity.getTask_pattern().keySet() ) {
-                    String processor = crawlerEntity.getTask_pattern().get(pattern);
-                    t.addPattern(pattern, processor);
+                    String templateID = crawlerEntity.getTask_pattern().get(pattern);
+                    CrawlerTemplate crawlerTemplate = null;
+                    Template template = null;
+                    if (!StringUtils.equalsIgnoreCase("null", templateID)) {
+                        if (StringUtils.isNotEmpty(templateID)) {
+                            crawlerTemplate = crawlerService.selectTemplate(Long.parseLong(templateID));
+                        }
+                        if (crawlerTemplate == null) {
+                            result.put("status", "failed");
+                            result.put("message", "Unrecognized Profile.");
+                            return ReturnResult.processOutputJSON(request, result);
+                        }
+                        template = CrawlerUtil.transferCrawlerTemplate(crawlerTemplate);
+                    }
+                    t.addPattern(pattern, template);
                 }
             }
-
-            System.out.println(t);
             crawler.scheduler().push(t);
         }
-        crawler.scheduler().setKey(crawlerEntity.getCrawler_name());
 //        crawler.scheduler().clear();
         crawler.setThread(crawlerEntity.getTask_thread_num());
         crawler.start();
@@ -181,7 +204,7 @@ public class SystemController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/{task}/stop", method = RequestMethod.GET)
+    @RequestMapping(value = "/{task}/stop", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public String taskStop(HttpServletRequest request, @PathVariable("task") String task) {
         JSONObject result = new JSONObject();
         CrawlerTask crawlerTask = systemService.selectCrawlerTask(task);

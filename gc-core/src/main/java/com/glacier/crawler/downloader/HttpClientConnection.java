@@ -2,16 +2,23 @@ package com.glacier.crawler.downloader;
 
 import com.glacier.crawler.entity.Page;
 import com.glacier.crawler.entity.Site;
+import com.glacier.crawler.utils.EncodingUtil;
+import org.apache.commons.io.IOUtils;
 import org.apache.http.Header;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.util.EncodingUtils;
 import org.apache.http.util.EntityUtils;
+import org.jsoup.Jsoup;
 
+import java.io.InputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -147,17 +154,20 @@ public class HttpClientConnection {
 
     public Page get() throws Exception{
         Page page = new Page();
-        Site site = Site.getSite(taskURL);
+        System.out.println("task: " + taskURL);
+        page.setBaseURL(taskURL);
+        Site site = Site.getSite(page.getBaseURL());
         site.setCookies(this.cookies);
-        HttpGet httpGet = new HttpGet(taskURL);
+        HttpGet httpGet = new HttpGet(page.getBaseURL());
         for (Header header : headers) {
             httpGet.addHeader(header);
         }
         CloseableHttpClient httpClient = getHttpClient(site);
-        CloseableHttpResponse response = httpClient.execute(httpGet);
+        HttpClientContext context = HttpClientContext.create();
+        CloseableHttpResponse response = httpClient.execute(httpGet, context);
         page.setStatusCode(response.getStatusLine().getStatusCode());
-        page.setRawText(EntityUtils.toString(response.getEntity()));
-        page.setBaseURL(taskURL);
+        InputStream ins = response.getEntity().getContent();
+        page.setRawText(EncodingUtil.getString(ins, response.getEntity().getContentType().getValue()));
         return page;
     }
 
@@ -169,7 +179,8 @@ public class HttpClientConnection {
         CloseableHttpClient httpClient = getHttpClient(site);
         CloseableHttpResponse response = httpClient.execute(httpPost);
         page.setStatusCode(response.getStatusLine().getStatusCode());
-        page.setRawText(EntityUtils.toString(response.getEntity()));
+        InputStream ins = response.getEntity().getContent();
+        page.setRawText(EncodingUtil.getString(ins, response.getEntity().getContentType().getValue()));
         page.setBaseURL(taskURL);
         return page;
     }
@@ -182,6 +193,27 @@ public class HttpClientConnection {
     public Page delete() throws Exception {
         Page page = new Page();
         return page;
+    }
+
+    public String getRealURL() throws Exception{
+
+        Site site = Site.getSite(taskURL);
+        HttpGet httpGet = new HttpGet(taskURL);
+        CloseableHttpClient httpClient = getHttpClient(site);
+        HttpClientContext context = HttpClientContext.create();
+        httpClient.execute(httpGet, context);
+        if (context.getRedirectLocations() == null) {
+            return taskURL;
+        }
+        if (context.getRedirectLocations().size() == 0) {
+            return taskURL;
+        }
+        System.out.println("------------------");
+        for (URI uri : context.getRedirectLocations() ) {
+            System.out.println("index: " + context.getRedirectLocations().indexOf(uri) + "\t" + uri.toString());
+        }
+        System.out.println("------------------");
+        return context.getRedirectLocations().get(0).toString();
     }
 
 }

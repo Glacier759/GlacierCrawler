@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5f9054-aa69-4f6f-bc67-14a8715a2e08" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_12_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_1_1_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_7_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/spring-redis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/Test.class" afterPath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/crawler/Crawler.class" afterPath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/crawler/Crawler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/entity/Task.class" afterPath="$PROJECT_DIR$/gc-core/target/classes/com/glacier/crawler/entity/Task.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TemplateController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CleaningDataUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Attr.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Tag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/EncodingUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/StringUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/XMLUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/gc_console_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/gc_console_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GlacierCrawler.iml" afterPath="$PROJECT_DIR$/GlacierCrawler.iml" />
@@ -22,22 +18,24 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TaskController.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TaskController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CrawlerUtil.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CrawlerUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/resources/spring.xml" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/classes/application.properties" afterPath="$PROJECT_DIR$/gc-console/target/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/gc-console/target/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/classes/spring.xml" afterPath="$PROJECT_DIR$/gc-console/target/classes/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/com/glacier/crawler/mapping/CrawlerConfigMapper.xml" afterPath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/com/glacier/crawler/mapping/CrawlerConfigMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/gc-console/target/gc-console/WEB-INF/classes/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java" afterPath="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-console/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/gc-console/src/main/resources/generatorConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/gc-core.iml" afterPath="$PROJECT_DIR$/gc-core/gc-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/pom.xml" afterPath="$PROJECT_DIR$/gc-core/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientGenerator.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/pipeline/Pipeline.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/pipeline/Pipeline.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/processor/PageProcessor.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/processor/PageProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Template.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Template.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/URLUtil.java" afterPath="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/URLUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gc-genera/gc-genera.iml" afterPath="$PROJECT_DIR$/gc-genera/gc-genera.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
@@ -68,14 +66,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java">
+      <file leaf-file-name="HttpClientConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+              <caret line="163" column="9" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2149#2150#0" expanded="false" />
+                <element signature="e#2183#2184#0" expanded="false" />
+                <element signature="e#2227#2228#0" expanded="false" />
+                <element signature="e#2285#2286#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpClientDownloader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CleaningDataUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CleaningDataUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.502994">
+              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1463221178000" expanded="true" signature="1554:1672" placeholder="INSERT INTO quake_info... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/StringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+              <folding>
+                <element signature="e#7658#7659#0" expanded="false" />
+                <element signature="e#7710#7711#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pipeline.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/pipeline/Pipeline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/XMLUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tmp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/processor/PageProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EncodingUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/EncodingUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="120" selection-start-line="42" selection-start-column="120" selection-end-line="42" selection-end-column="120" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,140 +176,27 @@
         <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrawlerEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+              <caret line="97" column="43" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
               <folding>
-                <element signature="e#747#748#0" expanded="false" />
-                <element signature="e#787#788#0" expanded="false" />
-                <element signature="e#820#821#0" expanded="false" />
-                <element signature="e#856#857#0" expanded="false" />
-                <element signature="e#895#896#0" expanded="false" />
-                <element signature="e#930#931#0" expanded="false" />
-                <element signature="e#986#987#0" expanded="false" />
-                <element signature="e#1034#1035#0" expanded="false" />
-                <element signature="e#1070#1071#0" expanded="false" />
-                <element signature="e#1102#1103#0" expanded="false" />
-                <element signature="e#1152#1153#0" expanded="false" />
-                <element signature="e#1194#1195#0" expanded="false" />
-                <element signature="e#1247#1248#0" expanded="false" />
-                <element signature="e#1283#1284#0" expanded="false" />
-                <element signature="e#1354#1355#0" expanded="false" />
-                <element signature="e#1404#1405#0" expanded="false" />
-                <element signature="e#1460#1461#0" expanded="false" />
-                <element signature="e#1510#1511#0" expanded="false" />
-                <element signature="e#1549#1550#0" expanded="false" />
-                <element signature="e#1584#1585#0" expanded="false" />
-                <element signature="e#1640#1641#0" expanded="false" />
-                <element signature="e#1688#1689#0" expanded="false" />
-                <element signature="e#1730#1731#0" expanded="false" />
-                <element signature="e#1768#1769#0" expanded="false" />
-                <element signature="e#2057#2058#0" expanded="false" />
-                <element signature="e#2092#2093#0" expanded="false" />
-                <element signature="e#2161#2162#0" expanded="false" />
-                <element signature="e#2209#2210#0" expanded="false" />
-                <element signature="e#2264#2265#0" expanded="false" />
-                <element signature="e#2313#2314#0" expanded="false" />
-                <element signature="e#2365#2366#0" expanded="false" />
-                <element signature="e#2400#2401#0" expanded="false" />
-                <element signature="e#2469#2470#0" expanded="false" />
-                <element signature="e#2517#2518#0" expanded="false" />
-                <element signature="e#2577#2578#0" expanded="false" />
-                <element signature="e#2626#2627#0" expanded="false" />
-                <element signature="e#2662#2663#0" expanded="false" />
-                <element signature="e#2694#2695#0" expanded="false" />
-                <element signature="e#2744#2745#0" expanded="false" />
-                <element signature="e#2786#2787#0" expanded="false" />
-                <element signature="e#2829#2830#0" expanded="false" />
-                <element signature="e#2867#2868#0" expanded="false" />
-                <element signature="e#2930#2931#0" expanded="false" />
-                <element signature="e#2984#2985#0" expanded="false" />
-                <element signature="e#3031#3032#0" expanded="false" />
-                <element signature="e#3068#3069#0" expanded="false" />
-                <element signature="e#3134#3135#0" expanded="false" />
-                <element signature="e#3186#3187#0" expanded="false" />
-                <element signature="e#3238#3239#0" expanded="false" />
-                <element signature="e#3287#3288#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-redis.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring-redis.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring-mvc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.1176472">
-              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32051283">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SystemController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4566#4567#0" expanded="false" />
+                <element signature="e#4610#4611#0" expanded="false" />
+                <element signature="e#4648#4649#0" expanded="false" />
+                <element signature="e#4686#4687#0" expanded="false" />
+                <element signature="e#4748#4749#0" expanded="false" />
+                <element signature="e#4798#4799#0" expanded="false" />
+                <element signature="e#4842#4843#0" expanded="false" />
+                <element signature="e#4883#4884#0" expanded="false" />
+                <element signature="e#4929#4930#0" expanded="false" />
+                <element signature="e#4969#4970#0" expanded="false" />
+                <element signature="e#5003#5004#0" expanded="false" />
+                <element signature="e#5034#5035#0" expanded="false" />
+                <element signature="e#5084#5085#0" expanded="false" />
+                <element signature="e#5126#5127#0" expanded="false" />
+                <element signature="e#5162#5163#0" expanded="false" />
+                <element signature="e#5199#5200#0" expanded="false" />
+                <element signature="e#5457#5458#0" expanded="false" />
+                <element signature="e#5499#5500#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -244,34 +223,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Site.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientGenerator.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/URLUtil.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/SerializeUtil.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/Downloader.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/Scheduler.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Page.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Template.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/BaseCrawler.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/interceptor/PublicInterceptor.java" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/ReturnResult.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/resources/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/dao/CrawlerTaskMapper.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerTaskMapper.xml" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/ErrorPageController.java" />
         <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/KeyUtil.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerConfig.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/SystemServiceImpl.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/SystemService.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/dao/CrawlerConfigMapper.java" />
         <option value="$PROJECT_DIR$/gc-console/pom.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TestController.java" />
@@ -280,21 +236,44 @@
         <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/login/Login.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/model/CrawlerConfigWithBLOBs.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerConfigMapper.xml" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CrawlerUtil.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java" />
         <option value="$PROJECT_DIR$/gc-console/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/gc-core/pom.xml" />
-        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java" />
-        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TaskController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/resources/spring.xml" />
         <option value="$PROJECT_DIR$/gc-console/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/gc-console/src/main/resources/spring-redis.xml" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Template.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Tag.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/SerializeUtil.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerTemplateMapper.xml" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/pipeline/Pipeline.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Page.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TaskController.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Attr.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CrawlerUtil.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TemplateController.java" />
         <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientGenerator.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/URLUtil.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/StringUtil.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java" />
         <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/XMLUtil.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/EncodingUtil.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/processor/PageProcessor.java" />
+        <option value="$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java" />
+        <option value="$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CleaningDataUtil.java" />
       </list>
     </option>
   </component>
@@ -355,8 +334,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -489,6 +468,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scheduler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -523,7 +570,245 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="proxy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="downloader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concurrent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -618,6 +903,218 @@
               <option name="myItemId" value="crawler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GlacierCrawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gc-console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -655,7 +1152,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -708,6 +1205,66 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="gc-core" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Template" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.glacier.crawler.template.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.glacier.crawler.template.Template" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gc-core" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Tmp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.glacier.crawler.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.glacier.crawler.utils.Tmp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gc-core" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CleaningDataUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.glacier.crawler.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.glacier.crawler.utils.CleaningDataUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gc-console" />
       <envs />
       <method />
     </configuration>
@@ -1282,16 +1839,22 @@
         </option>
       </method>
     </configuration>
-    <list size="4">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.Generator" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.gc-console" />
       <item index="2" class="java.lang.String" itemvalue="Application.Test" />
       <item index="3" class="java.lang.String" itemvalue="Application.KeyUtil" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Template" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Tmp" />
+      <item index="6" class="java.lang.String" itemvalue="Application.CleaningDataUtil" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.KeyUtil" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.CleaningDataUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tmp" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Template" />
+        <item index="4" class="java.lang.String" itemvalue="Application.KeyUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -1317,12 +1880,15 @@
       <workItem from="1462854583807" duration="6604000" />
       <workItem from="1462861999234" duration="16968000" />
       <workItem from="1462935552862" duration="21804000" />
-      <workItem from="1463023172589" duration="633000" />
+      <workItem from="1463023172589" duration="22563000" />
+      <workItem from="1463108389593" duration="19044000" />
+      <workItem from="1463201107156" duration="16318000" />
+      <workItem from="1463229196500" duration="523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122643000" />
+    <option name="totallyTimeSpent" value="180458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1330,16 +1896,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4520548" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5383562" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50410956" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4671233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.315832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31987077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1348,14 +1916,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66164386" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4410959" sideWeight="0.49676898" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4520548" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43835616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1372,7 +1938,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1381,193 +1947,33 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/proxy/Proxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/concurrent/CountableThreadPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.016129">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/Downloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36290324">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38709676">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.1.0/jackson-core-2.1.0.jar!/com/fasterxml/jackson/core/PrettyPrinter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2549575">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/SerializeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/ReturnResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.061253563">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/gc-core.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/ErrorPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1289474">
-          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/KeyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/dao/CrawlerTaskMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/lang/Boolean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15961538">
-          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/SystemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/SystemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="56" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.1.RELEASE/spring-webmvc-4.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3550914">
-          <caret line="506" column="27" selection-start-line="506" selection-start-column="27" selection-end-line="506" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.1.RELEASE/spring-webmvc-4.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3550914">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.1.RELEASE/spring-web-4.2.1.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.0384617">
-          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar!/org/apache/commons/io/IOUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34666666">
-          <caret line="246" column="25" selection-start-line="246" selection-start-column="25" selection-end-line="246" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="131" column="21" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/login/impl/WeiboLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/login/impl/ZhihuLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1575,20 +1981,148 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding>
+            <element signature="e#992#993#0" expanded="false" />
+            <element signature="e#1040#1041#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/proxy/Proxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/KeyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/ReturnResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/CrawlerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/dao/CrawlerTemplateMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10683761">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="15" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/service/impl/CrawlerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="57" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="57" />
+          <folding>
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1475#1476#0" expanded="false" />
+            <element signature="e#1546#1547#0" expanded="false" />
+            <element signature="e#1607#1608#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
+            <element signature="e#1735#1736#0" expanded="false" />
+            <element signature="e#1806#1807#0" expanded="false" />
+            <element signature="e#1879#1880#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerTemplateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+          <folding>
+            <marker date="1463054152000" expanded="true" signature="775:933" placeholder="select , fro... " />
+            <marker date="1463054152000" expanded="true" signature="1017:1082" placeholder="delete from " />
+            <marker date="1463054152000" expanded="true" signature="1181:1293" placeholder="insert into crawler_template... " />
+            <marker date="1463054152000" expanded="true" signature="2012:2195" placeholder="update crawl... " />
+            <marker date="1463054152000" expanded="true" signature="2315:2427" placeholder="update crawl... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#836#837#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/dao/CrawlerConfigMapper.java">
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/ErrorPageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="33" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Tag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/model/CrawlerTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#143#144#0" expanded="false" />
+            <element signature="e#168#169#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="136" column="35" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
+          <folding>
+            <element signature="e#3388#3389#0" expanded="false" />
+            <element signature="e#3440#3441#0" expanded="false" />
+            <element signature="e#3484#3485#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1596,72 +2130,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/model/CrawlerConfigWithBLOBs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5294118">
-          <caret line="38" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="8" />
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerConfigMapper.xml">
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/model/CrawlerTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="89.375">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.4059829">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/mapping/CrawlerTaskMapper.xml">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Attr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.75">
-          <caret line="64" column="89" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding>
+            <element signature="e#886#887#0" expanded="false" />
+            <element signature="e#919#920#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CrawlerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <caret line="150" column="61" selection-start-line="150" selection-start-column="61" selection-end-line="150" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java">
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/ReturnResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="45" />
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/SerializeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TemplateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="73" selection-start-line="169" selection-start-column="73" selection-end-line="169" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/template/Template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/concurrent/CountableThreadPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1669,118 +2214,108 @@
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/RedisScheduler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/entity/CrawlerEntity.java">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="106" column="109" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/scheduler/Scheduler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar!/org/apache/http/client/methods/HttpEntityEnclosingRequestBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26229507">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar!/org/apache/http/client/methods/HttpPost.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28688523">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar!/org/apache/http/util/EntityUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1297935">
+          <caret line="139" column="53" selection-start-line="139" selection-start-column="47" selection-end-line="139" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/entity/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
           <folding>
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#856#857#0" expanded="false" />
-            <element signature="e#895#896#0" expanded="false" />
-            <element signature="e#930#931#0" expanded="false" />
-            <element signature="e#986#987#0" expanded="false" />
-            <element signature="e#1034#1035#0" expanded="false" />
-            <element signature="e#1070#1071#0" expanded="false" />
-            <element signature="e#1102#1103#0" expanded="false" />
-            <element signature="e#1152#1153#0" expanded="false" />
-            <element signature="e#1194#1195#0" expanded="false" />
-            <element signature="e#1247#1248#0" expanded="false" />
-            <element signature="e#1283#1284#0" expanded="false" />
-            <element signature="e#1354#1355#0" expanded="false" />
-            <element signature="e#1404#1405#0" expanded="false" />
-            <element signature="e#1460#1461#0" expanded="false" />
-            <element signature="e#1510#1511#0" expanded="false" />
-            <element signature="e#1549#1550#0" expanded="false" />
-            <element signature="e#1584#1585#0" expanded="false" />
-            <element signature="e#1640#1641#0" expanded="false" />
-            <element signature="e#1688#1689#0" expanded="false" />
-            <element signature="e#1730#1731#0" expanded="false" />
-            <element signature="e#1768#1769#0" expanded="false" />
-            <element signature="e#2057#2058#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2161#2162#0" expanded="false" />
-            <element signature="e#2209#2210#0" expanded="false" />
-            <element signature="e#2264#2265#0" expanded="false" />
-            <element signature="e#2313#2314#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-            <element signature="e#2400#2401#0" expanded="false" />
-            <element signature="e#2469#2470#0" expanded="false" />
-            <element signature="e#2517#2518#0" expanded="false" />
-            <element signature="e#2577#2578#0" expanded="false" />
-            <element signature="e#2626#2627#0" expanded="false" />
-            <element signature="e#2662#2663#0" expanded="false" />
-            <element signature="e#2694#2695#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-            <element signature="e#2786#2787#0" expanded="false" />
-            <element signature="e#2829#2830#0" expanded="false" />
-            <element signature="e#2867#2868#0" expanded="false" />
-            <element signature="e#2930#2931#0" expanded="false" />
-            <element signature="e#2984#2985#0" expanded="false" />
-            <element signature="e#3031#3032#0" expanded="false" />
-            <element signature="e#3068#3069#0" expanded="false" />
-            <element signature="e#3134#3135#0" expanded="false" />
-            <element signature="e#3186#3187#0" expanded="false" />
-            <element signature="e#3238#3239#0" expanded="false" />
-            <element signature="e#3287#3288#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#818#819#0" expanded="false" />
+            <element signature="e#864#865#0" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#941#942#0" expanded="false" />
+            <element signature="e#979#980#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1044#1045#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1129#1130#0" expanded="false" />
+            <element signature="e#1175#1176#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1269#1270#0" expanded="false" />
+            <element signature="e#1334#1335#0" expanded="false" />
+            <element signature="e#1394#1395#0" expanded="false" />
+            <element signature="e#1425#1426#0" expanded="false" />
+            <element signature="e#1454#1455#0" expanded="false" />
+            <element signature="e#1592#1593#0" expanded="false" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1673#1674#0" expanded="false" />
+            <element signature="e#1713#1714#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring.xml">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/URLUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.43548387">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring-redis.xml">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/Downloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.31132075">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1788,34 +2323,124 @@
     <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/controller/SystemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <caret line="195" column="9" selection-start-line="195" selection-start-column="9" selection-end-line="195" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/Tmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/crawler/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="43" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4566#4567#0" expanded="false" />
+            <element signature="e#4610#4611#0" expanded="false" />
+            <element signature="e#4648#4649#0" expanded="false" />
+            <element signature="e#4686#4687#0" expanded="false" />
+            <element signature="e#4748#4749#0" expanded="false" />
+            <element signature="e#4798#4799#0" expanded="false" />
+            <element signature="e#4842#4843#0" expanded="false" />
+            <element signature="e#4883#4884#0" expanded="false" />
+            <element signature="e#4929#4930#0" expanded="false" />
+            <element signature="e#4969#4970#0" expanded="false" />
+            <element signature="e#5003#5004#0" expanded="false" />
+            <element signature="e#5034#5035#0" expanded="false" />
+            <element signature="e#5084#5085#0" expanded="false" />
+            <element signature="e#5126#5127#0" expanded="false" />
+            <element signature="e#5162#5163#0" expanded="false" />
+            <element signature="e#5199#5200#0" expanded="false" />
+            <element signature="e#5457#5458#0" expanded="false" />
+            <element signature="e#5499#5500#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1176472">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/XMLUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gc-console/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/pipeline/Pipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32051283">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/EncodingUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="120" selection-start-line="42" selection-start-column="120" selection-end-line="42" selection-end-column="120" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/processor/PageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/utils/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+          <folding>
+            <element signature="e#7658#7659#0" expanded="false" />
+            <element signature="e#7710#7711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-core/src/main/java/com/glacier/crawler/downloader/HttpClientConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="9" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2149#2150#0" expanded="false" />
+            <element signature="e#2183#2184#0" expanded="false" />
+            <element signature="e#2227#2228#0" expanded="false" />
+            <element signature="e#2285#2286#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gc-console/src/main/java/com/glacier/crawler/utils/CleaningDataUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.502994">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1463221178000" expanded="true" signature="1554:1672" placeholder="INSERT INTO quake_info... " />
+          </folding>
         </state>
       </provider>
     </entry>

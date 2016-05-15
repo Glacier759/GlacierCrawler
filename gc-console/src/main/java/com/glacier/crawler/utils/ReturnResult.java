@@ -1,6 +1,7 @@
 package com.glacier.crawler.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
 
@@ -26,6 +27,7 @@ public class ReturnResult {
 
     public static String toJSON(Object object) {
         ObjectMapper format = new ObjectMapper();
+        format.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         try {
             return format.writeValueAsString(object);
         }catch (Exception e) {

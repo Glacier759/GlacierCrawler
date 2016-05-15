@@ -1,6 +1,6 @@
 package com.glacier.crawler.entity;
 
-import com.glacier.crawler.processor.PageProcessor;
+import com.glacier.crawler.template.Template;
 import com.glacier.crawler.utils.URLUtil;
 
 import java.io.Serializable;
@@ -13,7 +13,7 @@ import java.util.Map;
 public class Task implements Serializable, Cloneable {
 
     private Task parent = null;
-    private String pageProcessor = "com.glacier.crawler.crawler.BaseCrawler";
+    private Template template = null;
     private String url;
 
     public final static int TYPE_TASK_ALL = 0;
@@ -23,11 +23,13 @@ public class Task implements Serializable, Cloneable {
     public final static int TYPE_TASK_PATTERN = 4;
 
     protected int crawlerType = TYPE_TASK_QUEUE;
-    protected Map<String, String> patternsAndProcessors = new HashMap<String, String>();
+    protected Map<String, Template> patternsAndProcessors = new HashMap<String, Template>();
 
     public Task(String url) {
         this.url = URLUtil.getURL(url);
     }
+
+    public Task(){}
 
     public String getUrl() {
         return url;
@@ -45,24 +47,12 @@ public class Task implements Serializable, Cloneable {
         this.crawlerType = crawlerType;
     }
 
-    public Map<String, String> getPatterns() {
+    public Map<String, Template> getPatterns() {
         return patternsAndProcessors;
     }
 
-    public void addPattern(String pattern) {
-        patternsAndProcessors.put(pattern, pageProcessor);
-    }
-
-    public void addPattern(String pattern, PageProcessor pageProcessor) {
-        patternsAndProcessors.put(pattern, pageProcessor.getClass().getName());
-    }
-
-    public void addPattern(String pattern, String processorClass) {
-        patternsAndProcessors.put(pattern, processorClass);
-    }
-
-    public void setProcessorClass(String processorClass) {
-        this.pageProcessor = processorClass;
+    public void addPattern(String pattern, Template template) {
+        patternsAndProcessors.put(pattern, template);
     }
 
     public Task getParent() {
@@ -74,11 +64,19 @@ public class Task implements Serializable, Cloneable {
         this.parent = parent;
     }
 
+    public Template getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(Template template) {
+        this.template = template;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "parent=" + parent +
-                ", pageProcessor='" + pageProcessor + '\'' +
+                ", template=" + template +
                 ", url='" + url + '\'' +
                 ", crawlerType=" + crawlerType +
                 ", patternsAndProcessors=" + patternsAndProcessors +

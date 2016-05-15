@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glacier.crawler.dao.CrawlerTemplateMapper" >
+  <resultMap id="BaseResultMap" type="com.glacier.crawler.model.CrawlerTemplate" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.glacier.crawler.model.CrawlerTemplate" extends="BaseResultMap" >
+    <result column="template" property="template" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id
+  </sql>
+  <sql id="Blob_Column_List" >
+    template
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from crawler_template
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from crawler_template
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.glacier.crawler.model.CrawlerTemplate" >
+    insert into crawler_template (id, template)
+    values (#{id,jdbcType=BIGINT}, #{template,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.glacier.crawler.model.CrawlerTemplate" >
+    insert into crawler_template
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="template != null" >
+        template,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="template != null" >
+        #{template,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.crawler.model.CrawlerTemplate" >
+    update crawler_template
+    <set >
+      <if test="template != null" >
+        template = #{template,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.glacier.crawler.model.CrawlerTemplate" >
+    update crawler_template
+    set template = #{template,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

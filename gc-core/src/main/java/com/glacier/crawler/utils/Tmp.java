@@ -1,6 +1,8 @@
 package com.glacier.crawler.utils;
 
-import java.util.regex.Pattern;
+import com.glacier.crawler.downloader.Downloader;
+import com.glacier.crawler.downloader.HttpClientDownloader;
+import com.glacier.crawler.entity.Page;
 
 /**
  * Created by Glacier on 16/5/5.
@@ -8,9 +10,13 @@ import java.util.regex.Pattern;
 public class Tmp {
 
     public static void main(String[] args) {
-        String url = "http://blog.csdn.net/blogdevteam/article/details/22283977";
-        String pattern = "http://blog.csdn.net/([^\\s]*)/([^\\s]*)/([^\\s]*)/([0-9]{8})";
-        System.out.println(Pattern.matches(pattern, url));
+        try {
+            Downloader downloader = new HttpClientDownloader();
+            Page page = downloader.connect("http://www.kooaoo.com/").get();
+            System.out.println(page.getDocument());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

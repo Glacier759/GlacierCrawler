@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glacier.crawler.dao.CrawlerConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.glacier.crawler.model.CrawlerConfig" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="task_name" property="taskName" jdbcType="VARCHAR" />
+    <result column="login_url" property="loginUrl" jdbcType="VARCHAR" />
+    <result column="login_use_cookie" property="loginUseCookie" jdbcType="BIT" />
+    <result column="task_type" property="taskType" jdbcType="VARCHAR" />
+    <result column="task_thread_num" property="taskThreadNum" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.glacier.crawler.model.CrawlerConfigWithBLOBs" extends="BaseResultMap" >
+    <result column="login_headers" property="loginHeaders" jdbcType="LONGVARCHAR" />
+    <result column="login_cookie" property="loginCookie" jdbcType="LONGVARCHAR" />
+    <result column="login_params" property="loginParams" jdbcType="LONGVARCHAR" />
+    <result column="task_patterns" property="taskPatterns" jdbcType="LONGVARCHAR" />
+    <result column="task_start_url" property="taskStartUrl" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, task_name, login_url, login_use_cookie, task_type, task_thread_num
+  </sql>
+  <sql id="Blob_Column_List" >
+    login_headers, login_cookie, login_params, task_patterns, task_start_url
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from crawler_config
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from crawler_config
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.glacier.crawler.model.CrawlerConfigWithBLOBs" >
+    insert into crawler_config (id, task_name, login_url, 
+      login_use_cookie, task_type, task_thread_num, 
+      login_headers, login_cookie, login_params, 
+      task_patterns, task_start_url)
+    values (#{id,jdbcType=BIGINT}, #{taskName,jdbcType=VARCHAR}, #{loginUrl,jdbcType=VARCHAR}, 
+      #{loginUseCookie,jdbcType=BIT}, #{taskType,jdbcType=VARCHAR}, #{taskThreadNum,jdbcType=INTEGER}, 
+      #{loginHeaders,jdbcType=LONGVARCHAR}, #{loginCookie,jdbcType=LONGVARCHAR}, #{loginParams,jdbcType=LONGVARCHAR}, 
+      #{taskPatterns,jdbcType=LONGVARCHAR}, #{taskStartUrl,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.crawler.model.CrawlerConfigWithBLOBs" >
+    insert into crawler_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="taskName != null" >
+        task_name,
+      </if>
+      <if test="loginUrl != null" >
+        login_url,
+      </if>
+      <if test="loginUseCookie != null" >
+        login_use_cookie,
+      </if>
+      <if test="taskType != null" >
+        task_type,
+      </if>
+      <if test="taskThreadNum != null" >
+        task_thread_num,
+      </if>
+      <if test="loginHeaders != null" >
+        login_headers,
+      </if>
+      <if test="loginCookie != null" >
+        login_cookie,
+      </if>
+      <if test="loginParams != null" >
+        login_params,
+      </if>
+      <if test="taskPatterns != null" >
+        task_patterns,
+      </if>
+      <if test="taskStartUrl != null" >
+        task_start_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="taskName != null" >
+        #{taskName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUrl != null" >
+        #{loginUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUseCookie != null" >
+        #{loginUseCookie,jdbcType=BIT},
+      </if>
+      <if test="taskType != null" >
+        #{taskType,jdbcType=VARCHAR},
+      </if>
+      <if test="taskThreadNum != null" >
+        #{taskThreadNum,jdbcType=INTEGER},
+      </if>
+      <if test="loginHeaders != null" >
+        #{loginHeaders,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="loginCookie != null" >
+        #{loginCookie,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="loginParams != null" >
+        #{loginParams,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="taskPatterns != null" >
+        #{taskPatterns,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="taskStartUrl != null" >
+        #{tastStartUrl,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.crawler.model.CrawlerConfigWithBLOBs" >
+    update crawler_config
+    <set >
+      <if test="taskName != null" >
+        task_name = #{taskName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUrl != null" >
+        login_url = #{loginUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="loginUseCookie != null" >
+        login_use_cookie = #{loginUseCookie,jdbcType=BIT},
+      </if>
+      <if test="taskType != null" >
+        task_type = #{taskType,jdbcType=VARCHAR},
+      </if>
+      <if test="taskThreadNum != null" >
+        task_thread_num = #{taskThreadNum,jdbcType=INTEGER},
+      </if>
+      <if test="loginHeaders != null" >
+        login_headers = #{loginHeaders,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="loginCookie != null" >
+        login_cookie = #{loginCookie,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="loginParams != null" >
+        login_params = #{loginParams,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="taskPatterns != null" >
+        task_patterns = #{taskPatterns,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="taskStartUrl != null" >
+        task_start_url = #{taskStartUrl,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.glacier.crawler.model.CrawlerConfigWithBLOBs" >
+    update crawler_config
+    set task_name = #{taskName,jdbcType=VARCHAR},
+      login_url = #{loginUrl,jdbcType=VARCHAR},
+      login_use_cookie = #{loginUseCookie,jdbcType=BIT},
+      task_type = #{taskType,jdbcType=VARCHAR},
+      task_thread_num = #{taskThreadNum,jdbcType=INTEGER},
+      login_headers = #{loginHeaders,jdbcType=LONGVARCHAR},
+      login_cookie = #{loginCookie,jdbcType=LONGVARCHAR},
+      login_params = #{loginParams,jdbcType=LONGVARCHAR},
+      task_patterns = #{taskPatterns,jdbcType=LONGVARCHAR},
+      task_start_url = #{taskStartUrl,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateCrawlerConfigByName" parameterType="com.glacier.crawler.model.CrawlerConfigWithBLOBs" >
+    update crawler_config
+    set task_name = #{taskName,jdbcType=VARCHAR},
+    login_url = #{loginUrl,jdbcType=VARCHAR},
+    login_use_cookie = #{loginUseCookie,jdbcType=BIT},
+    task_type = #{taskType,jdbcType=VARCHAR},
+    task_thread_num = #{taskThreadNum,jdbcType=INTEGER},
+    login_headers = #{loginHeaders,jdbcType=LONGVARCHAR},
+    login_cookie = #{loginCookie,jdbcType=LONGVARCHAR},
+    login_params = #{loginParams,jdbcType=LONGVARCHAR},
+    task_patterns = #{taskPatterns,jdbcType=LONGVARCHAR},
+    task_start_url = #{taskStartUrl,jdbcType=LONGVARCHAR}
+    where task_name = #{taskName,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glacier.crawler.model.CrawlerConfig" >
+    update crawler_config
+    set task_name = #{taskName,jdbcType=VARCHAR},
+      login_url = #{loginUrl,jdbcType=VARCHAR},
+      login_use_cookie = #{loginUseCookie,jdbcType=BIT},
+      task_type = #{taskType,jdbcType=VARCHAR},
+      task_thread_num = #{taskThreadNum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <delete id="deleteByCrawlerName" parameterType="java.lang.String" >
+    delete from crawler_config
+    where task_name = #{taskName,jdbcType=VARCHAR}
+  </delete>
+  <select id="selectByCrawlerName" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from crawler_config
+    where task_name = #{taskName,jdbcType=VARCHAR}
+  </select>
+</mapper>

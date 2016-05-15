@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glacier.crawler.dao.CrawlerTaskMapper" >
+  <resultMap id="BaseResultMap" type="com.glacier.crawler.model.CrawlerTask" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="task_name" property="taskName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, status, task_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from crawler_task
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from crawler_task
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.glacier.crawler.model.CrawlerTask" >
+    insert into crawler_task (id, status, task_name
+      )
+    values (#{id,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, #{taskName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.crawler.model.CrawlerTask" >
+    insert into crawler_task
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="taskName != null" >
+        task_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="taskName != null" >
+        #{taskName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.crawler.model.CrawlerTask" >
+    update crawler_task
+    <set >
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="taskName != null" >
+        task_name = #{taskName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glacier.crawler.model.CrawlerTask" >
+    update crawler_task
+    set status = #{status,jdbcType=VARCHAR},
+      task_name = #{taskName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByTaskName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from crawler_task
+    where task_name = #{task_name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAllCrawlerTask" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from crawler_task
+  </select>
+  <delete id="deleteByTaskName" parameterType="java.lang.String" >
+    delete from crawler_task
+    where task_name = #{task_name,jdbcType=VARCHAR}
+  </delete>
+  <update id="updateByTaskNameSelective" parameterType="com.glacier.crawler.model.CrawlerTask" >
+    update crawler_task
+    <set >
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="taskName != null" >
+        task_name = #{taskName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where task_name = #{taskName,jdbcType=VARCHAR}
+  </update>
+</mapper>

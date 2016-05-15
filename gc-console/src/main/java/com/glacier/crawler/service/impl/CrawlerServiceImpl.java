@@ -1,7 +1,9 @@
 package com.glacier.crawler.service.impl;
 
 import com.glacier.crawler.dao.CrawlerConfigMapper;
+import com.glacier.crawler.dao.CrawlerTemplateMapper;
 import com.glacier.crawler.model.CrawlerConfigWithBLOBs;
+import com.glacier.crawler.model.CrawlerTemplate;
 import com.glacier.crawler.service.CrawlerService;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,8 @@ public class CrawlerServiceImpl implements CrawlerService {
 
     @Resource
     CrawlerConfigMapper configMapper;
+    @Resource
+    CrawlerTemplateMapper templateMapper;
 
     @Override
     public int deleteCrawlerConfig(String crawlerName) {
@@ -39,5 +43,25 @@ public class CrawlerServiceImpl implements CrawlerService {
     @Override
     public int updateCrawlerConfigByID(CrawlerConfigWithBLOBs record) {
         return configMapper.updateByPrimaryKeySelective(record);
+    }
+
+    @Override
+    public int deleteTemplate(Long id) {
+        return templateMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int insertTemplate(CrawlerTemplate record) {
+        return templateMapper.insertSelective(record);
+    }
+
+    @Override
+    public CrawlerTemplate selectTemplate(Long id) {
+        return templateMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateTemplate(CrawlerTemplate record) {
+        return templateMapper.updateByPrimaryKeySelective(record);
     }
 }

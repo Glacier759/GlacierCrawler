@@ -12,7 +12,7 @@ public class HttpClientDownloader implements Downloader {
 
     private Map<String, HttpClientConnection> connections = new HashMap<String, HttpClientConnection>();
     private HttpClientConnection connection = null;
-    private int threadNum;
+    private int threadNum = 1;
 
     private HttpClientConnection getConnection(String url) {
         String domain = URLUtil.getDomain(url);

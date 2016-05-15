@@ -61,16 +61,11 @@ public abstract class Crawler implements Runnable {
             else {
                 Task task = scheduler.poll();
                 final Task taskFinal = task;
-                System.out.println("running task: " + task.getUrl());
-                threadPool.execute(new Runnable() {
-                    public void run() {
-                        try {
-                            processTask(taskFinal);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-//                        } finally {
-//                            signalNewUrl();
-                        }
+                threadPool.execute(() -> {
+                    try {
+                        processTask(taskFinal);
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 });
             }
@@ -96,63 +91,17 @@ public abstract class Crawler implements Runnable {
 
     public void processTask(Task task) {
         try {
-            System.out.println("task: " + task);
+//            System.out.println("before downloader - " + task.getUrl());
             Page page = downloader.connect(task.getUrl())
                     .userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.86 Safari/537.36")
                     .get();
-            String fileUri = page.getBaseURL();
-            String fileName = fileUri.substring(fileUri.lastIndexOf("/")+1);
-            if (fileName == null || fileName.length() == 0) {
-                fileName = "index_" + System.currentTimeMillis();
+            System.out.println("after downloader - " + page.getBaseURL());
+            if (page.getStatusCode() == 200) {
+                org.dom4j.Document document = pageProcessor.process(page, task, scheduler);
+                pipeline.process(document);
             }
-            System.out.println("fileName: [" +fileName +"]");
-            String filePath = fileUri.replaceAll(fileName, "");
-            System.out.println("filePath : " + filePath);
-            File file = new File("./data/" + filePath);
-            if (!file.exists()) {
-                file.mkdirs();
-            }
-            file = new File(filePath, fileName);
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            System.out.println("save path: " + file.getAbsolutePath() + fileName);
-            FileUtils.write(file, page.getDocument().toString(), "UTF-8");
-            Document doc = page.getDocument();
-            Elements eles = doc.select("a[href]");
-            for (Element ele : eles) {
-                String href = ele.attr("abs:href");
-                for(String pattern : task.getPatterns().keySet()) {
-                    System.out.println("href: " + href + "\tpattern: " + Pattern.matches(pattern, href) + "\tparrent: " + task.getParent());
-                    if (Pattern.matches(pattern, href)) {
-                        Task t = task.clone();
-                        t.setUrl(href);
-                        t.setParent(task);
-                        t.setCrawlerType(task.getCrawlerType());
-                        t.setProcessorClass(task.getPatterns().get(pattern));
-                        scheduler.push(t);
-                        break;
-                    }
-                }
-                if (task.getPatterns().size() == 0) {
-                    Task t = task.clone();
-                    t.setUrl(href);
-                    t.setParent(task);
-                    t.setCrawlerType(task.getCrawlerType());
-                    if (task.getCrawlerType() == Task.TYPE_TASK_DOMAIN) {
-                        try {
-                            if (URLUtil.getDomain(task.getUrl()).equals(URLUtil.getDomain(href))) {
-                                scheduler.push(t);
-                            }
-                        }catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    else if (task.getCrawlerType() == Task.TYPE_TASK_ALL) {
-                        scheduler.push(t);
-                    }
-                }
-            }
+
+
         }catch (Exception e){
             e.printStackTrace();
         }

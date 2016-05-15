@@ -6,6 +6,8 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Created by Glacier on 16/5/5.
  */
@@ -14,6 +16,7 @@ public class RedisScheduler extends Scheduler {
     private static final String QUEUE_PREFIX = "queue_";
     private static final String SET_PREFIX = "set_";
     private static JedisPool pool;
+    private ReentrantLock lock = new ReentrantLock();
     static {
         JedisPoolConfig config = new JedisPoolConfig();
         //控制一个pool可分配多少个jedis实例，通过pool.getResource()来获取；
@@ -28,20 +31,23 @@ public class RedisScheduler extends Scheduler {
         pool = new JedisPool(config, "localhost", 6379);
     }
 
-    public synchronized boolean isDuplicate(Task task) {
+    public boolean isDuplicate(Task task) {
         Jedis jedis = pool.getResource();
         try {
+            lock.lock();
             String a = SET_PREFIX + key;
             boolean isDuplicate = jedis.sismember(a, task.getUrl());
             return isDuplicate;
         }finally {
+            lock.unlock();
             jedis.close();
         }
     }
 
-    public synchronized void push(Task task) {
+    public void push(Task task) {
         Jedis jedis = pool.getResource();
         try {
+            lock.lock();
             if (task.getUrl().indexOf("#") > 0) {
                 task.setUrl(task.getUrl().substring(0, task.getUrl().lastIndexOf("#")));
             }
@@ -51,16 +57,19 @@ public class RedisScheduler extends Scheduler {
                 jedis.sadd((SET_PREFIX+key), task.getUrl());
             }
         } finally {
+            lock.unlock();
             jedis.close();
         }
     }
 
-    public synchronized Task poll() {
+    public Task poll() {
         Jedis jedis = pool.getResource();
         try {
+            lock.lock();
             Task task = (Task)SerializeUtil.unserialize(jedis.lpop((QUEUE_PREFIX+key).getBytes()));
             return task;
         }finally {
+            lock.unlock();
             jedis.close();
         }
     }
@@ -68,9 +77,11 @@ public class RedisScheduler extends Scheduler {
     public int count() {
         Jedis jedis = pool.getResource();
         try {
+            lock.lock();
             Long size = jedis.llen((QUEUE_PREFIX+key).getBytes());
             return size.intValue();
         }finally {
+            lock.unlock();
             jedis.close();
         }
     }

@@ -33,6 +33,7 @@ public class HttpClientGenerator {
                 .build();
         connectionManager = new PoolingHttpClientConnectionManager(reg);
         connectionManager.setDefaultMaxPerRoute(100);
+        connectionManager.setMaxTotal(1);
     }
 
     public HttpClientGenerator setPoolSize(int poolSize) {
